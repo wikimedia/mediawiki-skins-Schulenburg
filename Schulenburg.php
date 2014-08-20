@@ -3,5 +3,5 @@
 $wgValidSkinNames['schulenburg'] = 'Schulenburg';
 $wgSkipSkins[] = 'schulenburg';
 $wgSchulenburgSkinPath = false;
-$wgAutoloadClasses['SkinSchulenburg'] = "$IP/extensions/skins/Schulenburg/Schulenburg.class.php";
+$wgAutoloadClasses['SkinSchulenburg'] = __DIR__ . '/Schulenburg.class.php';
 

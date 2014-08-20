@@ -20,7 +20,7 @@ class SkinSchulenburg extends Skin {
 		}
 
 		$lang = $wgContLang->getCode();
-		$this->path = $wgSchulenburgSkinPath ? $wgSchulenburgSkinPath : "{$wgScriptPath}/extensions/skins/Schulenburg";
+		$this->path = $wgSchulenburgSkinPath ? $wgSchulenburgSkinPath : "{$wgScriptPath}/skins/Schulenburg";
 		$this->out = $out;
 		$bodyText = $out->getHTML();
 		$bodyText = preg_replace( '!(<img[^>]*src=")schstock/!', "$1{$this->path}/images/", $bodyText );
