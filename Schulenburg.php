@@ -12,15 +12,13 @@
  * require_once("$IP/skins/Schulenburg/Schulenburg.php");
  */
 
-$wgExtensionCredits['skin'][] = array(
-	'path' => __FILE__,
-	'name' => 'Schulenburg',
-	'author' => 'Tim Starling',
-	'description' => 'Schulenburg',
-	'url' => 'https://www.mediawiki.org/wiki/Skin:Schulenburg',
-);
-
-$wgValidSkinNames['schulenburg'] = 'Schulenburg';
-$wgSkipSkins[] = 'schulenburg';
-$wgSchulenburgSkinPath = false;
-$wgAutoloadClasses['SkinSchulenburg'] = __DIR__ . '/Schulenburg.class.php';
+if ( function_exists( 'wfLoadSkin' ) ) {
+	wfLoadSkin( 'Schulenburg' );
+	/*wfWarn(
+		'Deprecated PHP entry point used for Schulenburg skin. Please use wfLoadSkin instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);*/
+	return;
+} else {
+	die( 'This version of the Schulenburg skin requires MediaWiki 1.25+' );
+}
