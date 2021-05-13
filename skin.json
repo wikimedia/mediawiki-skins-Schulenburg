@@ -4,6 +4,9 @@
 	"url": "https://www.mediawiki.org/wiki/Skin:Schulenburg",
 	"descriptionmsg": "schulenburg-desc",
 	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
 	"MessagesDirs": {
 		"Schulenburg": [
 			"i18n"

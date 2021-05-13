@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class SkinSchulenburg extends Skin {
 	var $out;
 
@@ -12,14 +14,14 @@ class SkinSchulenburg extends Skin {
 	}
 
 	function outputPage( OutputPage $out = null ) {
-		global $wgContLang, $wgSchulenburgSkinPath, $wgScriptPath;
+		global $wgSchulenburgSkinPath, $wgScriptPath;
 
 		if ( !$out ) {
 			// MW 1.19
 			$out = $this->getOutput();
 		}
 
-		$lang = $wgContLang->getCode();
+		$lang = MediaWikiServices::getInstance()->getContentLanguage()->getCode();
 		$this->path = $wgSchulenburgSkinPath ? $wgSchulenburgSkinPath : "{$wgScriptPath}/skins/Schulenburg";
 		$this->out = $out;
 		$bodyText = $out->getHTML();
