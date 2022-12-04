@@ -29,8 +29,8 @@ class SkinSchulenburg extends Skin {
 		$bodyText = preg_replace( '!(<[^>]*style="[^"]*url\()schstock/!', "$1{$this->path}/images/", $bodyText );
 		$bodyText = preg_replace( '!(<input[^>]*src=")schstock/!', "$1{$this->path}/images/", $bodyText );
 		$query = 'usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400';
-		$siteCss = Title::newFromText( 'MediaWiki:Schulenburg.css' )->getLocalUrl( $query );
-		$siteJs = Title::newFromText( 'MediaWiki:Schulenburg.js' )->getLocalUrl( $query );
+		$siteCss = Title::newFromText( 'MediaWiki:Schulenburg.css' )->getLocalURL( $query );
+		$siteJs = Title::newFromText( 'MediaWiki:Schulenburg.js' )->getLocalURL( $query );
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
