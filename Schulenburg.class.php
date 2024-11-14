@@ -13,7 +13,7 @@ class SkinSchulenburg extends Skin {
 		return "{$this->path}/main.js";
 	}
 
-	function outputPage( OutputPage $out = null ) {
+	function outputPage( ?OutputPage $out = null ) {
 		global $wgSchulenburgSkinPath, $wgScriptPath;
 
 		if ( !$out ) {
